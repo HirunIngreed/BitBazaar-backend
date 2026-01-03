@@ -13,7 +13,12 @@ dotenv.config()
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: "https://bit-bazaar-frontend-8qak-b49v9gon6-hirun-ingreeds-projects.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 
 app.use(bodyParser.json())
 
