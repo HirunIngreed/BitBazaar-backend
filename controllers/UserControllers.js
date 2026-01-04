@@ -246,7 +246,6 @@ export async function googleLogin(req,res){
                 password : newUser.password,
                 image : newUser.image,
                 isEmailVerified: true,
-				image: newUser.image
             },process.env.JWT_KEY
         )
         res.json(
@@ -268,7 +267,7 @@ export async function googleLogin(req,res){
                 password : user.password,
                 role : user.role,
                 address : user.address,
-                image : user.image[0]
+                image : user.image
             },process.env.JWT_KEY
             
         )
